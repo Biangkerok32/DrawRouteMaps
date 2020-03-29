@@ -1,14 +1,13 @@
 buildscript {
-    ext.support_version = '27.0.2'
+    ext.support_version = '28.0.0'
     ext.play_service_version = '11.8.0'
     repositories {
+        google()
+        mavenCentral()  //add this line
         jcenter()
-        maven {
-            url 'https://maven.google.com/'
-        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.4.1'
         classpath 'com.google.gms:google-services:3.1.1'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
     }
@@ -16,11 +15,9 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
         google()
-        maven {
-            url 'https://maven.google.com/'
-        }
+        mavenCentral()  //add this line
+        jcenter()
     }
 }
 
